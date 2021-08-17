@@ -1,12 +1,22 @@
 // import './App.css';
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import NavBar from './component/nav/nav';
 import Footer from './component/footer/footer';
 import AboutMe from './component/about/about_me';
 
-function App() {
+import banner from "./imgs/banner.png";
+
+
+const Banner = () => {
+  return (
+    <Image src={banner} fluid/>
+
+  );
+}
+const App = () => {
+
+
   return (
     <Container fluid>
       <Row>
@@ -14,9 +24,14 @@ function App() {
           <NavBar />
         </Col>
       </Row>
+      <Row>
+        <Col >
+          <Banner />
+        </Col>
+      </Row>
 
       <Row>
-        <Col lg="">
+        <Col>
           <AboutMe />
 
         </Col>
